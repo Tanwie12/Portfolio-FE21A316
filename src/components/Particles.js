@@ -15,7 +15,7 @@ function Particless() {
         console.log(container); 
       }; 
   return (
-    <div className="">
+    <div className=" particles">
     <Particles 
       id="tsparticles" 
       init={particlesInit} 
@@ -33,7 +33,7 @@ function Particless() {
   },
   
   color: {
-    value: '#ffffff'
+    value: '#ffff0f'
   },
   shape: {
     type: 'circle',
