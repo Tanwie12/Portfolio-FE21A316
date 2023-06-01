@@ -22,12 +22,12 @@ function Header() {
       <CTA/>
       <Particless/>
       <Headersocilas/>
-      <div className='me'>
+      {/* <div className='me'>
        
-       {/* <div className='image'>
+       <div className='image'>
         <img src={Me} alt='my immage' ></img>
-        </div> */}
-      </div>
+        </div> 
+      </div> */}
       <a href='#contact'className='scroll__down'>scroll Down</a>
       </div>
     </header>

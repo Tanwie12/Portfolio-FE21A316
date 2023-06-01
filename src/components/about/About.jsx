@@ -1,6 +1,6 @@
 import React from 'react'
 import './about.css'
-import Aboutimg from '../../assets/me-about.jpg'
+import Aboutimg from '../../assets/black.jpg'
 import {FaAward} from 'react-icons/fa'
 import {FiUsers} from 'react-icons/fi'
 import { BiBook } from 'react-icons/bi';
