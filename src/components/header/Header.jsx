@@ -1,7 +1,7 @@
 import React from 'react'
 import './header.css'
 import CTA from './CTA'
-
+import Me from '../../assets/me.png'
 import Headersocilas from './Headersocilas'
 import Particless from '../Particles'
 
@@ -20,14 +20,14 @@ function Header() {
       <h1>Tanwie Bruno</h1>
       <h5 className='text-light'>Fullstack Developer</h5>
       <CTA/>
-      <Particless/>
+      <Particless className='particles'/>
       <Headersocilas/>
-      {/* <div className='me'>
+      <div className='me'>
        
        <div className='image'>
         <img src={Me} alt='my immage' ></img>
         </div> 
-      </div> */}
+      </div>
       <a href='#contact'className='scroll__down'>scroll Down</a>
       </div>
     </header>

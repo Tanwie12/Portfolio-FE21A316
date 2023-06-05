@@ -2,6 +2,41 @@
     padding-top: 10rem;
    
 }
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .create-button,
+  .delete-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #ff5e3a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover,
+  .delete-button:hover {
+    background-color: #ff754d;
+  }
+  
+  .create-button:focus,
+  .delete-button:focus {
+    outline: none;
+  }
+  
+  .create-button:active,
+  .delete-button:active {
+    background-color: #e64227;
+  }
+  
 .container.testimonials__container{
     width: 50%;
 }

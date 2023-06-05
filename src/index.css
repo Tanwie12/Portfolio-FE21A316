@@ -37,7 +37,7 @@ line-height: 1.7rem;
 background-image:url('./assets/bg-texture.png') ;
     }
     .container{
-     
+    
       width: var(--container-width-lg);
       margin: 0 auto;
     }

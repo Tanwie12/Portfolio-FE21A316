@@ -25,15 +25,15 @@ function Particless() {
       particles: {
        
   number: {
-    value: 80,
+    value: 90,
     density: {
       enable: true,
-      value_area: 800
+      value_area: 1000
     }
   },
   
   color: {
-    value: '#ffff0f'
+    value: '#ffffff'
   },
   shape: {
     type: 'circle',
@@ -51,7 +51,7 @@ function Particless() {
     anim: {
       enable: false,
       speed: 1,
-      opacity_min: 0.1,
+      opacity_min: 0.8,
       sync: false
     }
   },
