@@ -57,7 +57,7 @@ function Testimonials() {
   return (
     <section id="testimonials">
       <div className="toggle-buttons">
-        <h2></h2>
+        
         <button className="toggle-button" onClick={handleToggleButtons}>
           {showButtons ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>

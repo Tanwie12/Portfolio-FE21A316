@@ -122,9 +122,12 @@ app.delete('/api/testimonials', async (req, res) => {
   }
 });
 
-
+let deltebtn=true;
 app.get('/api/portfolio', async (req, res) => {
- await Portfolio.deleteMany({});
+ if (deltebtn) {
+  await Portfolio.deleteMany({});
+  deltebtn=false;
+ }
   if(!initialize){
     await Portfolio.create(data_portfolio)
     initialize=true;
