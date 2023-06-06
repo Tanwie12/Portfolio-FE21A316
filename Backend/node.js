@@ -9,7 +9,7 @@ const dotenv= require('dotenv');
 dotenv.config();
 //connecting mongoose
 
-mongoose.connect('mongodb+srv://brunomike:1234Adey@portfolio.kkoqoeq.mongodb.net/?retryWrites=true&w=majority/Portfolio_database')
+mongoose.connect('mongodb+srv://brunomike:1234Adey@portfolio.kkoqoeq.mongodb.net/Portfolio_database?retryWrites=true&w=majority')
 
 
 

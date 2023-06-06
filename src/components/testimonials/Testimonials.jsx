@@ -58,7 +58,7 @@ function Testimonials() {
   return (
     <section id="testimonials">
       <div className="toggle-buttons">
-        
+        <k></k>
         <button className="toggle-button" onClick={handleToggleButtons}>
           {showButtons ? <AiOutlineMinus /> : <AiOutlinePlus />}
         </button>
@@ -90,7 +90,7 @@ function Testimonials() {
           data.map(({ avatar, name, review }, index) => (
             <SwiperSlide className="testimonial" key={index}>
               <div className="client__avatar">
-                <img src={`http://localhost:5000/${avatar}`} alt="Avatar" />
+                <img src={`${url}/${avatar}`} alt="Avatar" />
               </div>
               <h5 className="client__name">{name}</h5>
               <small className="client__review">{review}</small>
