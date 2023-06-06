@@ -11,6 +11,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 function Testimonials() {
+  const url=`${process.env.REACT_APP_API_PATH}`
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showButtons, setShowButtons] = useState(false);
@@ -21,7 +22,7 @@ function Testimonials() {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/testimonials');
+      const response = await axios.get(`${url}/testimonials`);
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -32,7 +33,7 @@ function Testimonials() {
 
   const handleCreate = async () => {
     try {
-      await axios.post('http://localhost:5000/api/testimonials/create');
+      await axios.post(`${url}/testimonials/create`);
       fetchTestimonials(); // Fetch testimonials again to update the data
       console.log('Testimonials created');
     } catch (error) {
@@ -42,7 +43,7 @@ function Testimonials() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete('http://localhost:5000/api/testimonials');
+      await axios.delete(`${url}/testimonials`);
       setData([]);
       console.log('Testimonials deleted');
     } catch (error) {

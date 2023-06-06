@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 const Testimonial=require('./models/testimonialModel');//databse schema
 const Portfolio=require('./models/portfolioModel');
 const path = require('path');
+const dotenv= require('dotenv');
+dotenv.config();
 //connecting mongoose
 
 mongoose.connect('mongodb://127.0.0.1:27017/Portfolio_database')
@@ -137,7 +139,9 @@ res.json(data);
 console.log(data);
 });
 
-
-app.listen(5000, () => {
+if(process.env.API_PORT){
+app.listen(process.env.API_PORT, () => {
   console.log('Listening on port 5000');
-});
+});}
+ 
+module.exports= app

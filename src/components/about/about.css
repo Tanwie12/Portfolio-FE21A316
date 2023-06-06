@@ -42,7 +42,7 @@ transition: 0.5s;
     border-radius: 50%;
     background-color: var(--color-primary);
     opacity: 0;
-    transition: all 0.1s ease;
+    transition: all 0.0001s ease;
   }
   
   .about__me-image:hover:before {
@@ -60,7 +60,7 @@ font-family: 'Poppins';
     transform: translate(-50%, -50%);
     opacity: 0;
     text-align: center;
-    animation: typing 5s linear forwards;
+    animation: typing 0.1s linear forwards;
 
     word-wrap: break-word;
    

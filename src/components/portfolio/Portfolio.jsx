@@ -5,13 +5,14 @@ import axios from 'axios';
 
 
 function Portfolio() {
+  const url=`${process.env.REACT_APP_API_PATH}`
   const [data, setData] = useState([{}]);
   const [loading, setLoading] = useState(true);
   // const avatars = [AVT1, ];
 
   useEffect(() => {
     axios
-      .get('http://localhost:5000/api/portfolio')
+      .get(`${url}/portfolio`)
       .then(res => {
         setData(res.data);
         setLoading(false);
@@ -33,7 +34,7 @@ function Portfolio() {
             return(
               <article  key={id} className='portfolio__item'>
               <div className="portfolio__item-image">
-               <img src={`http://localhost:5000/${Image}`} alt={title}/>
+               <img src={`${url}/${Image}`} alt={title}/>
               </div>
               <h3>{title}</h3>
               <div className="portfolio__item-cta">

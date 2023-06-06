@@ -13,7 +13,9 @@ import Footer from './components/footer/Footer'
 
 
 function App() {
+  
  
+  console.log(process.env.REACT_APP_API_PATH);
   return (
     <div className="App">
     <>

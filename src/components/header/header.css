@@ -50,14 +50,19 @@ header{
     .me{
         background: linear-gradient(
         var(--color-primary), transparent);
-        height: 22rem;
+        height: 24rem;
         width: 20rem;
         position: absolute;
         left: calc(50% - 11rem); /* to center the element */
         margin-top: 1rem;
         border-radius:12rem 12rem 0 0 ;
-        padding: 2rem 1.5rem 1.5rem 0;
+        padding: rem 1.5rem 1.5rem 0;
         overflow: hidden;
+        }
+        .image{
+          opacity: .3;
+          width: 23rem;
+          height: 3rem;
         }
     
         .scroll__down{
