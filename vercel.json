@@ -1,8 +1,11 @@
-{"rewrites":[
-    {
-        "source":"/api/(.*)",
-        "destination":"/Backend"
-
-    }
-]
-}
+{
+    "functions": {
+      "Backend/node.js": {
+        "runtime": "vercel-node@14"
+      }
+    },
+    "routes": [
+      { "src": "/.*", "dest": "Backend/node.js" }
+    ]
+  }
+  

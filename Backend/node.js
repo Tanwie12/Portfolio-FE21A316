@@ -8,8 +8,8 @@ const path = require('path');
 const dotenv= require('dotenv');
 dotenv.config();
 //connecting mongoose
-
-mongoose.connect('mongodb+srv://brunomike:1234Adey@portfolio.kkoqoeq.mongodb.net/Portfolio_database?retryWrites=true&w=majority')
+console.log(process.env.API_PORT)
+mongoose.connect(process.env.MONGODB_URI)
 
 
 

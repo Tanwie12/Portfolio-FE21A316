@@ -22,7 +22,7 @@ function Testimonials() {
 
   const fetchTestimonials = async () => {
     try {
-      const response = await axios.get(`${url}/testimonials`);
+      const response = await axios.get(`${url}/api/testimonials`);
       setData(response.data);
       setLoading(false);
     } catch (error) {
@@ -33,7 +33,7 @@ function Testimonials() {
 
   const handleCreate = async () => {
     try {
-      await axios.post(`${url}/testimonials/create`);
+      await axios.post(`${url}/api/testimonials/create`);
       fetchTestimonials(); // Fetch testimonials again to update the data
       console.log('Testimonials created');
     } catch (error) {
@@ -43,7 +43,7 @@ function Testimonials() {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`${url}/testimonials`);
+      await axios.delete(`${url}/api/testimonials`);
       setData([]);
       console.log('Testimonials deleted');
     } catch (error) {

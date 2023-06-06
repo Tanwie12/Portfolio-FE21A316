@@ -12,7 +12,7 @@ function Portfolio() {
 
   useEffect(() => {
     axios
-      .get(`${url}/portfolio`)
+      .get(`${url}/api/portfolio`)
       .then(res => {
         setData(res.data);
         setLoading(false);
