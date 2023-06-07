@@ -4,18 +4,15 @@
       {
         "src": "./Backend/node.js",  
         "use": "@vercel/node"
-      },
-      {
-        "src": "./build",    
-        "use": "@vercel/static"
       }
+     
     ],
   
     
     "rewrites": [
       {
         "source": "/api/(.*)",
-        "destination": "/Backend/node.js"
+        "destination": "/Backend"
       }
     ]
   }
