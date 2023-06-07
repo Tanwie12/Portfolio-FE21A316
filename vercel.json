@@ -1,12 +1,5 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "./Backend/node.js",  
-        "use": "@vercel/node"
-      }
-     
-    ],
+    
   
     
     "rewrites": [
