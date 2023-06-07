@@ -30,8 +30,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "dev": "nodemon node.js",
-    "vercel-build": "node ./Backend/node.js"
+    "dev": "nodemon node.js"
+    
   },
   "eslintConfig": {
     "extends": [
