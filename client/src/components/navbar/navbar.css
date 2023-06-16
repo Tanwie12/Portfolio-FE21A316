@@ -1,0 +1,75 @@
+nav{
+    background: rgba(0, 0, 0, 0.3);
+    width: max-content;/*fit exactly the width  of it's content*/
+    display: block;
+    z-index: 2;
+    padding: 0.7rem 1.7rem;
+    position: fixed;/*make it fixed on the page no matter how e scroll, the elemnt won't go down*/
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 2rem;
+    display: flex;
+    gap: 0.8rem;
+    border-radius: 3rem;
+    backdrop-filter: blur(15px);
+    
+
+}
+nav a{
+    background: transparent;
+    padding: 0.1rem;
+    border-radius: 50%;
+    color: rgb(218, 222, 231);
+    font-size: 1.2rem;
+}
+nav a:hover{
+    background: rgba(0, 0, 0, 0.3);
+}
+nav a.active{
+    background: var(--color-primary);
+    color: var(--color-bg);
+}
+
+
+
+.open-button {
+  /* Styles for the close button and open button */
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 2;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: rgb(218, 222, 231);
+}
+
+.close-button {
+    position: fixed;
+    top: -2rem;
+   
+    left: 12rem;
+    z-index: 2;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .close-button:hover{
+    background: rgba(0, 0, 0, 0.3);
+
+  }
+  
+  .close-button svg {
+    font-size: 1.5rem;
+    color: rgb(218, 222, 231);
+  }
+  
+
+
+.open-button {
+  /* Styles for the open button */
+}

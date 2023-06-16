@@ -1,0 +1,83 @@
+#testimonials{
+    padding-top: 10rem;
+   
+}
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .create-button,
+  .delete-button {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    padding: 0.8rem 1.2rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: #ff5e3a;
+    color: #ffffff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .create-button:hover,
+  .delete-button:hover {
+    background-color: #ff754d;
+  }
+  
+  .create-button:focus,
+  .delete-button:focus {
+    outline: none;
+  }
+  
+  .create-button:active,
+  .delete-button:active {
+    background-color: #e64227;
+  }
+  
+.container.testimonials__container{
+    width: 50%;
+}
+.client__avatar{
+    width: 4rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    border: 0.4rem solid var(--color-primary-variant);
+}
+.testimonial{
+    background: var(--color-bg-variant);
+    text-align: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    user-select: none;
+}
+.client__review{
+    color:var(--color-light);
+    font-weight: 300;
+    display: block;
+    width: 80%;
+    margin: 0.8rem auto 0;
+
+}
+ /*-------------------------media wuery for medium devices---------------------------------------*/
+ @media only screen and (max-width:1024px){ 
+   .container.testimonials__container{
+    width: 80%;
+   }
+  }
+    /*-------------------------media wuery for small devices---------------------------------------*/
+  @media only screen and (max-width:600px){
+     .container.testimonials__container{
+        width: var(--container-width-sm);
+     }
+     .client__review{
+        width: var(--container-width-sm);
+     }
+     #testimonials{
+        margin-bottom: -18rem;
+     }
+      }
