@@ -15,7 +15,7 @@ import Footer from './components/footer/Footer'
 function App() {
   
  
-  console.log(process.env.REACT_APP_API_PATH);
+  console.log(process.env.REACT_APP_API_URL);
   return (
     
     <div className="App" id='app'>
