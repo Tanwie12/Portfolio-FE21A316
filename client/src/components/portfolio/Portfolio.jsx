@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 function Portfolio() {
-  const url=`https://fe21a316-deploy.onrender.com`
+  const url=process.env.REACT_APP_API_URL
   const [data, setData] = useState([{}]);
   const [loading, setLoading] = useState(true);
   // const avatars = [AVT1, ];
@@ -22,7 +22,7 @@ function Portfolio() {
         console.error(err);
         setLoading(false);
       });
-  }, []);
+  }, [url]);
   return (
     <section id='portfolio'>
       <h5>My Recent Work</h5>

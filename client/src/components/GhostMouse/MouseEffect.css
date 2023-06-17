@@ -1,0 +1,59 @@
+/* play with vars for different effets
+:root {
+  --color-cursor: 220, 90, 90;
+  --cursor-outline-shade: 5;
+  --cursor-size: 200px;
+  --cursor-outline-size: 1200px;
+}
+
+html,
+body {
+  cursor: none;
+  background-color: #2f2c2c;
+ 
+} */
+
+
+
+
+
+
+
+
+
+hr {
+  border: 0;
+  height: 2px;
+  width: 3em;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 0 auto 1em;
+}
+
+h1 + hr {
+  margin: 0 auto 2em;
+}
+
+#cursor-dot,
+#cursor-dot-outline {
+  z-index: 999;
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.15s ease-in-out, transform 0.15s ease-in-out;
+}
+
+#cursor-dot {
+  width: var(--cursor-size);
+  height: var(--cursor-size);
+  background-color: rgba(var(--color-cursor), 1);
+}
+
+#cursor-dot-outline {
+  width: var(--cursor-outline-size);
+  height: var(--cursor-outline-size);
+  background-color: rgba(var(--color-cursor), var(--cursor-outline-shade));
+}

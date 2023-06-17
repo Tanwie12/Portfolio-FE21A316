@@ -9,7 +9,8 @@ const dotenv= require('dotenv');
 dotenv.config();
 //connecting mongoose
 console.log(process.env.API_PORT)
-mongoose.connect(process.env.MONGODB_URI)
+
+ 
 
 
 const corsOptions ={
@@ -141,8 +142,22 @@ res.json(data);
 console.log(data);
 });
 
-if(process.env.API_PORT){
-app.listen(process.env.API_PORT, () => {
-  console.log('Listening on port 5000');
-});}
+async function startServer() {
+  try {
+    await mongoose.connect(process.env.MONGODB_URI);
+    console.log('Connected to MongoDB');
+
+    if (process.env.API_PORT) {
+      app.listen(process.env.API_PORT, () => {
+        console.log(`Listening on port ${process.env.API_PORT}`);
+      });
+    } else {
+      console.log('API_PORT environment variable not set');
+    }
+  } catch (error) {
+    console.error('Failed to connect to MongoDB:', error);
+  }
+}
+
+startServer();
  

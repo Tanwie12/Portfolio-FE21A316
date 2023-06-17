@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './testimonials.css';
 import axios from 'axios';
 import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
@@ -6,25 +6,22 @@ import { AiOutlinePlus, AiOutlineMinus } from 'react-icons/ai';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
+
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 function Testimonials() {
-  const url=`https://fe21a316-deploy.onrender.com`
+  const url=process.env.REACT_APP_API_URL
+  console.log(url);
+ // const url=`https://fe21a316-deploy.onrender.com`
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showButtons, setShowButtons] = useState(false);
 
-  useEffect(() => {
-
-    
-    fetchTestimonials();
-  }, []);
-
-  const fetchTestimonials = async () => {
+  const fetchTestimonials = useCallback(async () => {
     try {
-      const response =  await axios.get(`${url}/api/testimonials`);
+      const response = await axios.get(`${url}/api/testimonials`);
       setData(response.data);
       setLoading(false);
       console.log(response.data);
@@ -32,8 +29,15 @@ function Testimonials() {
       console.error(error);
       setLoading(false);
     }
-   
-  };
+  }, [url]);
+
+  useEffect(() => {
+
+    
+    fetchTestimonials();
+  }, [fetchTestimonials]);
+
+ 
 
   const handleCreate = async () => {
     try {
