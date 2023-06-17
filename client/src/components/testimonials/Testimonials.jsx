@@ -11,7 +11,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 function Testimonials() {
-  const url=`http://localhost:5000`
+  const url=`https://fe21a316-deploy.onrender.com`
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showButtons, setShowButtons] = useState(false);

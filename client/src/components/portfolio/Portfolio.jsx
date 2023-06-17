@@ -5,7 +5,7 @@ import axios from 'axios';
 
 
 function Portfolio() {
-  const url=`http://localhost:5000`
+  const url=`https://fe21a316-deploy.onrender.com`
   const [data, setData] = useState([{}]);
   const [loading, setLoading] = useState(true);
   // const avatars = [AVT1, ];
