@@ -1,10 +1,10 @@
 header{
     height: 100vh;
-    padding-top: 6rem;
+    padding-top: 7rem;
     overflow: hidden;
     /* background: rgba(30, 18, 18, 0.6);  */
  
-     position: fixed;
+    
     opacity: 0.8;
   
 }
@@ -24,8 +24,8 @@ header{
     position:relative ;
 }
 .cta{
-    padding-bottom: 2rem;
-    margin-top: 2rem;
+    /* padding-bottom: 2rem; */
+    margin-top: 2.5rem;
     display: flex;
     gap: 1.2rem;
     justify-content: center;
@@ -47,24 +47,23 @@ header{
     height: 2rem;
     background: var(--color-primary);
     }
-    .me{
-        display: none;
-        background: linear-gradient(
-        var(--color-primary), transparent);
-        height: 24rem;
-        width: 20rem;
-        position: absolute;
-        left: calc(50% - 11rem); /* to center the element */
-        margin-top: 1rem;
-        border-radius:12rem 12rem 0 0 ;
-        padding: rem 1.5rem 1.5rem 0;
-        overflow: hidden;
-        }
-        .image{
-         
-          width: 23rem;
-          height: 3rem;
-        }
+    .me {
+      margin-top: 4rem;
+      /* display: none; */
+      background: linear-gradient(var(--color-primary), transparent);
+      height: 30rem;
+      width: 22rem;
+      position: absolute;
+      left:calc(50% - 11rem) ;/* center horizontally */
+      /* center vertically */
+     
+      border-radius: 12rem 12rem 0 0;
+    
+      overflow: hidden;
+      
+    }
+     
+        
     
         .scroll__down{
             position: absolute;
