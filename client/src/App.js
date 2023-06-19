@@ -33,6 +33,7 @@ function App() {
     });
 
     ScrollReveal().reveal('.title', {
+      reset: false,
       duration: 3000,
       origin: 'top',
       distance: '300px',
@@ -70,6 +71,7 @@ function App() {
     });
 
     ScrollReveal().reveal('.slide-up', {
+      reset: false,
       duration: 2000,
       origin: 'bottom',
       distance: '100px',
@@ -92,6 +94,7 @@ function App() {
     });
 
     ScrollReveal().reveal('.slide-bottom', {
+      reset: false,
       duration: 2000,
       origin: 'top',
       distance: '100px',
