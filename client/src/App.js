@@ -24,6 +24,10 @@ function App() {
     setDarkMode(!darkMode);
   };
   useEffect(() => {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+    if (!isMobile) {
     ScrollReveal().reveal('.show-once', {
       reset: false,
     });
@@ -95,6 +99,7 @@ function App() {
       opacity: 0.3,
       scale: 0.5,
     });
+  }
   }, []);
  
   return (
