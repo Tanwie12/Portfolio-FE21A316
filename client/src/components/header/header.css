@@ -2,7 +2,7 @@ header{
     height: 100vh;
     padding-top: 6rem;
     overflow: hidden;
-    background: black; 
+    /* background: rgba(30, 18, 18, 0.6);  */
  
      position: fixed;
     opacity: 0.8;
@@ -48,6 +48,7 @@ header{
     background: var(--color-primary);
     }
     .me{
+        display: none;
         background: linear-gradient(
         var(--color-primary), transparent);
         height: 24rem;
@@ -60,7 +61,7 @@ header{
         overflow: hidden;
         }
         .image{
-          opacity: .3;
+         
           width: 23rem;
           height: 3rem;
         }
@@ -87,6 +88,8 @@ header{
   position: relative;
   z-index: 2;
 }
+
+
 
 @media only screen and (min-width:1024px){ 
  
@@ -122,6 +125,9 @@ header{
     }
     header{
         height: 100vh;
+    }
+    .me{
+      display: block;
     }
         }
             

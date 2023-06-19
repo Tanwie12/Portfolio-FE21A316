@@ -11,9 +11,7 @@ function Header() {
   return (
     <header id='home'>
       
-      <div className="particles-container">
-      
-         </div>
+     
       <div  className='container header__container particles-overlay'>
       <h5>hello i'm
       </h5>

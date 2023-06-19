@@ -10,7 +10,8 @@
   text-decoration: none;
 }
 
-  :root{ 
+  :root{
+    --bg-gradient:  linear-gradient(-45deg, #ee7752, #e16295, #58a851, #3223d5);
     --color-bg:#1f1f38; 
     --color-bg-variant:#2c2c6c;
     --color-primary:#4db5ff;
@@ -30,11 +31,26 @@
       display: none;
     }
     body{
+      background:var(--bg-gradient);
+  background-size: 4000% 4000%;
+  animation: gradient 15s ease infinite;
+  height: 100vh;
       font-family: 'Poppins', sans-serif;
-      background: var(--color-black);
+      /* background: var(--color-black); */
       color: var(--color-white);
 line-height: 1.7rem;
-background-image:url('./assets/bg-texture.png') ;
+/* background-image:url('./assets/bg-texture.png') ; */
+    }
+    @keyframes gradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
     }
     .container{
     
