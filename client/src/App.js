@@ -1,5 +1,5 @@
 
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Header from './components/header/Header'
 import Navbar from './components/navbar/Navbar'
 import About from './components/about/About'
@@ -12,6 +12,8 @@ import Footer from './components/footer/Footer'
 import AnimatedCursor from './components/GhostMouse/GhostMouseEffect'
 import './App.css';
 import { MyComponent } from './components/Vannda/VandaGlobe';
+import RevealContent from './components/RevealEffect/RevealContent';
+import ScrollReveal from 'scrollreveal';
 
 
 function App() {
@@ -21,7 +23,79 @@ function App() {
   const handleDarkModeToggle = () => {
     setDarkMode(!darkMode);
   };
+  useEffect(() => {
+    ScrollReveal().reveal('.show-once', {
+      reset: false,
+    });
 
+    ScrollReveal().reveal('.title', {
+      duration: 3000,
+      origin: 'top',
+      distance: '300px',
+      easing: 'cubic-bezier(0.5, 0, 0, 1)',
+      rotate: {
+        x: 20,
+        z: -10,
+      },
+    });
+
+    ScrollReveal().reveal('.fade-in', {
+      duration: 5000,
+      move: 0,
+    });
+
+    ScrollReveal().reveal('.scaleUp', {
+      duration: 4000,
+      scale: 0.85,
+    });
+
+    ScrollReveal().reveal('.flip', {
+      delay: 500,
+      duration: 2000,
+      rotate: {
+        x: 20,
+        z: 20,
+      },
+    });
+
+    ScrollReveal().reveal('.slide-right', {
+      duration: 3000,
+      origin: 'left',
+      distance: '300px',
+      easing: 'ease-in-out',
+    });
+
+    ScrollReveal().reveal('.slide-up', {
+      duration: 2000,
+      origin: 'bottom',
+      distance: '100px',
+      easing: 'cubic-bezier(.37,.01,.74,1)',
+      opacity: 0.3,
+      scale: 0.5,
+    });
+    ScrollReveal().reveal('.slide-left', {
+      duration: 2000,
+      origin: 'left',
+      distance: '300px',
+      easing: 'ease-in-out',
+    });
+
+    ScrollReveal().reveal('.slide-right', {
+      duration: 2000,
+      origin: 'right',
+      distance: '300px',
+      easing: 'ease-in-out',
+    });
+
+    ScrollReveal().reveal('.slide-bottom', {
+      duration: 2000,
+      origin: 'top',
+      distance: '100px',
+      easing: 'cubic-bezier(.37,.01,.74,1)',
+      opacity: 0.3,
+      scale: 0.5,
+    });
+  }, []);
  
   return (
     <>
@@ -45,6 +119,7 @@ function App() {
  </label>
 </div>
 <MyComponent/>
+<RevealContent/>
 
 <Header/>
 
@@ -52,15 +127,32 @@ function App() {
   
 
 <Navbar/>
-<About/>
-<Experience/>
-<Services/>
+<RevealContent className='slide-up'>
+          <About />
+        </RevealContent>
 
+        <RevealContent className='scaleUp'>
+          <Experience />
+        </RevealContent>
 
-<Portfolio/>
-<Testimonial/>
-<Contact/>
+        <RevealContent className='slide-left'>
+          <Services />
+        </RevealContent>
+
+        <RevealContent className='slide-right'>
+          <Portfolio />
+        </RevealContent>
+
+        <RevealContent className='slide-left'>
+          <Testimonial />
+        </RevealContent>
+
+        <RevealContent className='slide-bottom'>
+          <Contact />
+        </RevealContent>
+        <RevealContent className='slide-up'>
 <Footer/>
+</RevealContent>
 <AnimatedCursor/>
      
     </div>

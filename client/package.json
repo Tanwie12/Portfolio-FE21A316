@@ -19,6 +19,7 @@
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.10.1",
     "sass": "^1.63.4",
+    "scrollreveal": "^4.0.9",
     "swiper": "^9.4.1",
     "three": "^0.121.0",
     "tsparticles": "^2.10.1",
