@@ -45,16 +45,19 @@ function App() {
     });
 
     ScrollReveal().reveal('.fade-in', {
+      reset: false,
       duration: 5000,
       move: 0,
     });
 
     ScrollReveal().reveal('.scaleUp', {
+      reset: false,
       duration: 4000,
       scale: 0.85,
     });
 
     ScrollReveal().reveal('.flip', {
+      reset: false,
       delay: 500,
       duration: 2000,
       rotate: {
@@ -64,6 +67,7 @@ function App() {
     });
 
     ScrollReveal().reveal('.slide-right', {
+      reset: false,
       duration: 3000,
       origin: 'left',
       distance: '300px',
@@ -72,6 +76,7 @@ function App() {
 
     ScrollReveal().reveal('.slide-up', {
       reset: false,
+      
       duration: 2000,
       origin: 'bottom',
       distance: '100px',
@@ -80,6 +85,7 @@ function App() {
       scale: 0.5,
     });
     ScrollReveal().reveal('.slide-left', {
+      reset: false,
       duration: 2000,
       origin: 'left',
       distance: '300px',
@@ -87,6 +93,7 @@ function App() {
     });
 
     ScrollReveal().reveal('.slide-right', {
+      reset: false,
       duration: 2000,
       origin: 'right',
       distance: '300px',
