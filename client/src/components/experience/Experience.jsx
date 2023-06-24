@@ -1,13 +1,25 @@
-import React from 'react'
-import './experience.css'
-import {BsPatchCheckFill} from 'react-icons/bs'
+import React, { useEffect, useRef } from 'react';
+import VanillaTilt from 'vanilla-tilt';
+import './experience.css';
+import { BsPatchCheckFill } from 'react-icons/bs';
+
 function Experience() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(containerRef.current, {
+      max: 25,
+      speed: 400,
+      glare: true,
+      'max-glare': 1,
+    });
+  }, []);
   return (
     <section id='experience'>
       <h5>what skills i have</h5>
       <h2>My Experience</h2>
       <div className="container experience__container">
-        <div className="experience__frontend">
+        <div className="experience__frontend"ref={containerRef}>
           <h3>Front End Development</h3>
           <div className="experience__content">
             <article className='
@@ -57,7 +69,7 @@ function Experience() {
         {/* END OF FRONT END SECTION */}
 
 
-        <div className="experience__backend">
+        <div className="experience__backend"ref={containerRef}>
         <h3>Back End Development</h3>
           <div className="experience__content">
             <article className='

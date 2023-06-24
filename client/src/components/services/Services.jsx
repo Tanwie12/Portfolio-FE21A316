@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react';
+import VanillaTilt from 'vanilla-tilt';
+
 import './services.css'
 import {BiCheck}  from 'react-icons/bi'
 
 
 function Services() {
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    VanillaTilt.init(containerRef.current, {
+      max: 25,
+      speed: 400,
+      glare: true,
+      'max-glare': 1,
+    });
+  }, []);
     return (
       <section id='services'>
 
@@ -11,7 +23,7 @@ function Services() {
         what i offer</h5>
       <h2>Services</h2>
       <div className=" container services__container">
-     <article className='service'>
+     <article className='service'ref={containerRef}>
       <div className="service__head">
         <h3>UI/UX Design</h3>
       </div>
@@ -45,7 +57,7 @@ function Services() {
         </ul>
      </article>
      {/* END OF UI/UX */}
-     <article className='service'>
+     <article className='service' ref={containerRef}>
       <div className="service__head">
         <h3>WEB DEVELOPMENT</h3>
       </div>
@@ -82,7 +94,7 @@ function Services() {
         </ul>
      </article>
      {/* END OD WEB */}
-     <article className='service'>
+     <article className='service'ref={containerRef}>
       <div className="service__head">
         <h3>APP DEVELOPMENT</h3>
       </div>

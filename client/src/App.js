@@ -147,7 +147,7 @@ function App() {
           <Services />
         </RevealContent>
 
-        <RevealContent className='slide-right'>
+        <RevealContent className='slide-left'>
           <Portfolio />
         </RevealContent>
 

@@ -90,9 +90,13 @@ const data_testimonial = [
   },
 ];
 let initialize=false;// use to create the databse only ones
-
+let deltebtn=true;
 
 app.get('/api/testimonials', async (req, res) => {
+  if (deltebtn) {
+    await Testimonial.deleteMany({});
+    deltebtn=false;
+   }
     if(!initialize){
       await Testimonial.create(data_testimonial)
       initialize=true;
@@ -127,7 +131,7 @@ app.delete('/api/testimonials', async (req, res) => {
   }
 });
 
-let deltebtn=true;
+
 app.get('/api/portfolio', async (req, res) => {
  if (deltebtn) {
   await Portfolio.deleteMany({});
