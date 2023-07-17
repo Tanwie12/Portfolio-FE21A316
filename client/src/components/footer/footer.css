@@ -54,20 +54,18 @@
  
   /*-------------------------media wuery for medium devices---------------------------------------*/
  @media only screen and (max-width:1024px){ 
+
    
  }
    /*-------------------------media wuery for small devices---------------------------------------*/
- @media only screen and (max-width:600px){
-  /* .footer-content {
-    flex-direction: row;
-    justify-content: space-between;
+/* General mobile devices */
+@media only screen and (max-width: 768px) {
+  /* Styles for smaller screens */
+  #footer {
+    margin-top: 50vh;
   }
+}
 
-  .footer-links {
-    flex-wrap: nowrap;
-  } */
-  
-     }
 
      .waveWrapper {
       z-index: 0;

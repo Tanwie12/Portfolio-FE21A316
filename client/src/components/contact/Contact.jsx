@@ -40,9 +40,9 @@ function Contact() {
         </div>
         <form ref={form} onSubmit={sendEmail}>
           <input type="text" name='name' placeholder="Name"required></input>
-          <input type="email" name='email' placeholder="email"required></input>
+          <input type="email" name='enmail' placeholder="email"required></input>
           <textarea name='message' placeholder="Message" required></textarea>
-          <button type="submit"className='btn btn-primary'>send Message</button>
+          <button type="submit"className='btn btn-primary '>send Message</button>
         </form>
         </div>
     </section>

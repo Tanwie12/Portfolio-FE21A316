@@ -140,6 +140,9 @@ font-family: 'Poppins';
         }
           /*-------------------------media wuery for small devices---------------------------------------*/
         @media only screen and (max-width:600px){
+          #about{
+            margin-top: 15rem;
+          }
             .about__me{
                 width: 65%;
                 margin: 0 auto 3rem ;
